@@ -49,4 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
             this.style.transform = "scale(1)";
         });
     });
+
+const year = new Date().getFullYear();
+document.querySelector("footer p").innerHTML = `©${year} Javier A. Manosalva - Bucaramanga`;
+
+
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = `Última modificación: ${lastModified}`;
+
 });
