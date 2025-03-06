@@ -14,9 +14,7 @@
 <body>
     <header>
         <div class="logo">
-            <div class="logo-img">
-                <span>📷</span>
-            </div>
+            <div class="logo-img">📷</div>
             <div class="logo-text">
                 <h1>Timbuktu</h1>
                 <p>Chamber of Commerce</p>
@@ -28,52 +26,95 @@
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html" class="join-highlight">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><button class="theme-toggle">🌓</button></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme">🌓</button></li>
             </ul>
         </nav>
     </header>
 
-    <div class="hero">
-        <div class="hero-text">scalable, responsive hero image</div>
+    <section class="hero">
+        <div class="hero-text">Scalable, responsive hero image</div>
         <a href="#" class="keynote-btn">Keynote Tickets</a>
-    </div>
+    </section>
 
     <main>
         <h2 class="page-title">Home</h2>
-
         <div class="info-grid">
             <div class="panel">
                 <div class="panel-header">Events</div>
                 <div class="panel-content" id="events-container">
-                    <!-- Events will be loaded dynamically here -->
+                    <!-- Eventos dinámicos -->
                 </div>
             </div>
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <img class="weather-icon" src="images/SunnyWeather.svg" alt="Sunny Weather">
+                <p><strong>75° F</strong> - Partly Cloudy</p>
+                <p><strong>High:</strong> 85°</p>
+                <p><strong>Low:</strong> 52°</p>
+                <p><strong>Humidity:</strong> 34%</p>
+                <p><strong>Sunrise:</strong> 7:30 AM</p>
+                <p><strong>Sunset:</strong> 9:59 PM</p>
+            </section>
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <p><strong>Today:</strong> 90° F</p>
+                <p><strong>Wednesday:</strong> 89° F</p>
+                <p><strong>Thursday:</strong> 68° F</p>
+            </section>
+        </div>
 
-            <div class="weather-grid">
-                <div class="panel">
-                    <div class="panel-header">Current Weather</div>
-                    <div class="panel-content" id="weather-container">
-                        <!-- Weather data will be loaded dynamically -->
-                    </div>
-                </div>
+        <div class="business-list">
+            <div class="card">
+                <h2>Business Name</h2>
+                <p>Business Tag Line</p>
+                <p><strong>Email:</strong> <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:8005551234">800-555-1234</a></p>
+                <p><strong>Website:</strong> <a href="http://mybusiness.com">mybusiness.com</a></p>
+            </div>
+            <div class="card">
+                <h2>Business Name</h2>
+                <p>Business Tag Line</p>
+                <p><strong>Email:</strong> <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:8005551234">800-555-1234</a></p>
+                <p><strong>Website:</strong> <a href="http://mybusiness.com">mybusiness.com</a></p>
+            </div>
+            <div class="card">
+                <h2>Business Name</h2>
+                <p>Business Tag Line</p>
+                <p><strong>Email:</strong> <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:8005551234">800-555-1234</a></p>
+                <p><strong>Website:</strong> <a href="http://mybusiness.com">mybusiness.com</a></p>
             </div>
         </div>
     </main>
 
     <footer>
         <div class="footer-content">
+            <!-- Información de la empresa -->
             <div class="footer-info">
                 <h3>Timbuktu Chamber of Commerce</h3>
-                <div class="footer-address">
-                    <p>10 Rue De La Paix</p>
-                    <p>Timbuktu, Mali 999</p>
-                    <p>info@timbuktucc.org</p>
-                    <p>(223) 555-2300</p>
-                </div>
+                <p>10 Rue De La Paix, Timbuktu, Mali 999</p>
+                <p>Email: <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
+                <p>Phone: <a href="tel:+2235552300">(223) 555-2300</a></p>
+            </div>
+    
+            <!-- Redes sociales -->
+            <div class="footer-social">
+                <a href="https://youtube.com"><img src="images/youtube-svgrepo-com.svg" alt="YouTube"></a>
+                <a href="https://twitter.com"><img src="images/Threads_(app)_logo.svg" alt="Twitter"></a>
+                <a href="https://linkedin.com"><img src="images/LinkedIn_icon.svg" alt="LinkedIn"></a>
+            </div>
+    
+            <!-- Información extra -->
+            <div class="footer-extra">
+                <p>WDD231 Class Project</p>
+                <p>Marie Martinez</p>
+                <p>&copy; 2024 Timbuktu Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/chamber.js"></script>
+    <script src="scripts/chamber.js" defer></script>
 </body>
 </html>
