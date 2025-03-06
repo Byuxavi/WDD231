@@ -18,7 +18,8 @@
             <img src="images/profile.jpg" alt="Foto de Javier A. Manosalva">
             <span>Javier A. Manosalva</span>
         </div>
-        <nav>
+        <button id="menu-toggle">☰</button>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Chamber</a></li>
@@ -38,35 +39,34 @@
 
         <section class="content-box">
             <h2>Bucaramanga, Colombia</h2>
-            <img src="images/bucaramanga.jpg" alt="Baobab Trees">
-    
+            <img src="images/bucaramanga.jpg" alt="Vista de Bucaramanga, Colombia">
         </section>
 
         <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filters">
-                <button class="active">All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button class="active" data-category="all">All</button>
+                <button data-category="cse">CSE</button>
+                <button data-category="wdd">WDD</button>
             </div>
             <div class="courses">
-                <div class="course cse">CSE 110</div>
+                <div class="course cse completed">CSE 110</div>
                 <div class="course wdd">WDD 130</div>
                 <div class="course cse">CSE 111</div>
                 <div class="course cse">CSE 210</div>
                 <div class="course wdd">WDD 131</div>
                 <div class="course wdd">WDD 231</div>
             </div>
+            <p id="total-credits"></p>
         </section>
     </main>
 
     <footer>
-        <p>©2025 Javier A. Manosalvar -  Bucaramanga</p>
+        <p id="copyright"></p>
         <p id="lastModified"></p>
     </footer>
 
     <script src="scripts/script.js" defer></script>
-    <span id="last-modified"></span></p>
 
 </body>
 </html>

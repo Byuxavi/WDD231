@@ -1,11 +1,15 @@
-
+/* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
 
 header {
     background-color: #1d3b5a;
@@ -14,10 +18,10 @@ header {
     justify-content: space-evenly;
     align-items: center;
     color: white;
-    position: fixed; 
-    width: 100%; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .profile {
@@ -56,25 +60,55 @@ nav ul li a {
     padding: 8px 12px;
     background-color: black;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Estilo de navegación activa */
 nav ul li a.active {
     background-color: #ffd700;
     color: black;
 }
 
+/* Hover en los enlaces */
 nav ul li a:hover {
     background-color: #555;
     transform: scale(1.1);
 }
 
+/* Estilo del menú desplegable en dispositivos pequeños */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Contenido principal */
 main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Espacio superior para header fijo */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
     font-size: 28px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Secciones de contenido */
@@ -96,7 +130,7 @@ h1 {
     border-radius: 8px;
 }
 
-
+/* Estilo del certificado */
 .certificate {
     background-color: white;
     padding: 20px;
@@ -105,9 +139,11 @@ h1 {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Filtros de los cursos */
 .filters {
     display: flex;
     gap: 10px;
+    margin-bottom: 15px;
 }
 
 .filters button {
@@ -117,14 +153,16 @@ h1 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Estilo de botón de filtro activo */
 .filters button.active {
     background-color: #ffd700;
     color: black;
 }
 
-
+/* Diseño de la lista de cursos */
 .courses {
     display: flex;
     flex-wrap: wrap;
@@ -132,13 +170,17 @@ h1 {
     margin-top: 15px;
 }
 
+/* Estilo general de cada curso */
 .course {
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
+    width: 150px; /* Definir un ancho fijo para mantener consistencia */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Estilo de cada tipo de curso */
 .cse {
     background-color: #8b4513;
     color: white;
@@ -149,10 +191,46 @@ h1 {
     color: black;
 }
 
+/* Curso completado */
+.completed {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: line-through;
+}
 
+/* Estilos del pie de página */
 footer {
     background-color: #1d3b5a;
     color: white;
     text-align: center;
     padding: 15px;
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box {
+        padding: 15px;
+    }
+
+    .courses {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+
